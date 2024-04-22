@@ -60,7 +60,11 @@ main {
     background: #E3E6F3;
     /* background: pink; */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    height: 15vh;
+    height: 13vh;
+    /* z-index: 999; */
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 #navbar {
@@ -112,7 +116,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 85vh;
+    height: 87vh;
 }
 
 #hero .description {
@@ -189,3 +193,8 @@ main {
 }
 
 /* SLIDER */
+
+#hero .pic img {
+    width: 400px;
+    margin-right: 40px;
+}
