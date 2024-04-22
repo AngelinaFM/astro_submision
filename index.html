@@ -12,10 +12,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
-
     <header>
         <section id="header">
             <a href="#"><img src="img/logoAngel.png" class="logo" alt="Angel Shop" width="130px"></a>
@@ -33,7 +34,78 @@
         </section>
     </header>
 
-    <script src="main.js"></script>
+    <!-- CONTENT -->
+    <main>
+        <section id="hero">
+            <div class="description">
+                <!-- <h4>Lorem Ipsum</h4> -->
+                <h1>Lorem Ipsum Dolor Sit </h1>
+                <h2>Amet Consectetur</h2>
+                <p>Save more with coupons & up to 70% off! </p>
+                <div class="ctn-button">
+                    <button class="btn-item">BUY NOW</button>
+                    <button class="btn-item">PRE-ORDER</button>
+                </div>
+
+                <!-- SLIDER OF PICTURE -->
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <div>
+                            <img src="img/product/top-1.jpg" alt="" class="image-item">
+                        </div>
+                        <div>
+                            <img src="img/product/top-2.jpg" alt="" class="image-item">
+                        </div>
+                        <div>
+                            <img src="img/product/top-3.jpg" alt="" class="image-item">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CUSTOM SCROLL BAR -->
+                <div class="ctn-slider">
+                    <div class="slider-track">
+                        <div class="slider-thumb"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pic">
+                <img src="img/model.png" alt="">
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        const imageWrapper = document.querySelector('.image-wrapper')
+        const imageItems = document.querySelectorAll('.image-wrapper > *')
+        const imageLength = imageItems.length
+        const perView = 1
+        let totalScroll = 0
+        const delay = 2000
+
+        imageWrapper.style.setProperty('--per-view', perView)
+        for (let i = 0; i < perView; i++) {
+            imageWrapper.insertAdjacentHTML('beforeend', imageItems[i].outerHTML)
+        }
+
+        let autoScroll = setInterval(scrolling, delay)
+
+        function scrolling() {
+            totalScroll++
+            if (totalScroll == imageLength + 1) {
+                clearInterval(autoScroll)
+                totalScroll = 1
+                imageWrapper.style.transition = '0s'
+                imageWrapper.style.left = '0'
+                autoScroll = setInterval(scrolling, delay)
+            }
+            const widthEl = document.querySelector('.image-wrapper > :first-child').offsetWidth + 24
+            imageWrapper.style.left = `-${totalScroll * widthEl}px`
+            imageWrapper.style.transition = '.3s'
+        }
+    </script>
 </body>
 
 </html>
