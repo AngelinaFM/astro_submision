@@ -1,7 +1,7 @@
 const imageWrapper = document.querySelector('.image-wrapper')
 const imageItems = document.querySelectorAll('.image-wrapper > *')
 const imageLength = imageItems.length
-const perView = 1
+const perView = 2
 let totalScroll = 0
 const delay = 2000
 
