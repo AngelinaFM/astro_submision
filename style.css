@@ -81,9 +81,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 80px;
-    background: #E3E6F3;
-    /* background: pink; */
+    padding: 50px 100px;
+    background: #fff;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     height: 12vh;
     z-index: 999;
@@ -114,7 +113,7 @@ header {
 
 #navbar li a:hover,
 #navbar li a.active {
-    color: #088178;
+    color: #fe4c50;
 }
 
 #navbar li a.active::after,
@@ -122,7 +121,7 @@ header {
     content: "";
     width: 30%;
     height: 2px;
-    background: #088178;
+    background: #fe4c50;
     position: absolute;
     bottom: -4px;
     left: 20px;
@@ -131,17 +130,23 @@ header {
 #navbar li .fa-solid {
     font-size: 1.5rem;
 }
+
 /* HEADER END */
 
 /* HOME PAGE */
 #hero {
-    /* background-color: blue; */
+    background-image: url("img/product/banner/slider_1.jpg");
     background-color: rgb(227, 230, 243);
-    padding: 0 80px;
+    padding: 0 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 88vh;
+    /* height: 88vh; */
+    height: 100vh;
+    line-height: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
 }
 
 #hero .description {
@@ -150,52 +155,60 @@ header {
     /* border: 1px solid black; */
 }
 
+#hero h1 {
+    font-size: 72px;
+    font-weight: 400;
+}
+
 #hero h4 {
     padding-bottom: 15px;
 }
 
-#hero h2 {
-    color: #088178;
-}
-
-/* BUTTON */
-#hero .btn-item {
-    padding: 12px;
-    width: 120px;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    font-weight: 550px;
+/* BUTTON BUY NOW */
+#hero .ctn-button button {
+    background: #fe4c50;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    text-align: center;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 18px 20px;
+    width: 150px;
+    transition: all 0.5s;
     cursor: pointer;
 }
 
-/* BUY NOW */
-#hero .ctn-button button:first-child {
-    margin-right: 10px;
-    background: #000;
-    border: none;
-    outline: none;
-    color: #fff;
-    padding: 14px;
-    transition: 0.3s ease;
+#hero .ctn-button button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    text-align: center;
 }
 
-/* PRE-ORDER */
-#hero .ctn-button button:nth-child(2) {
-    background: transparent;
-    color: black;
-    border-color: black;
-    border-style: solid;
-    transition: 0.3s ease;
+#hero .ctn-button button span:after {
+    content: '\00bb';
+    /* font-size: 30px; */
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+    text-align: center;
 }
 
-#hero .ctn-button button:first-child:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+#hero .ctn-button button:hover span {
+    padding-right: 25px;
 }
 
-#hero .ctn-button button:nth-child(2):hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+#hero .ctn-button button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
+
+
 /* BUTTON END */
 
 /* PIC LANDING PAGE */
@@ -204,6 +217,7 @@ header {
     height: 100%;
     margin-right: 1.82rem;
 }
+
 #hero .pic img {
     height: 100%;
     width: 100%;
@@ -251,6 +265,7 @@ header {
     -webkit-box-shadow: 9px 9px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 9px 9px 5px 0px rgba(0, 0, 0, 0.75); */
 }
+
 /* SLIDER END*/
 
 /* PRODUCT */
@@ -269,7 +284,7 @@ header {
     width: 23%;
     min-width: 250px;
     padding: 10px 12px;
-    border: 1px solid #cce7d0;
+    border: 1px solid #fe4c50;
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
@@ -305,14 +320,14 @@ header {
 
 #product1 .pro .des i {
     font-size: 12px;
-    color:  rgb(243, 181, 25);
+    color: rgb(243, 181, 25);
 }
 
 #product1 .pro .des h4 {
     padding-top: 7px;
     font-size: 15px;
     font-weight: 700;
-    color: #088178;
+    color: #fe4c50;
 }
 
 #product1 .pro .cart {
@@ -320,14 +335,15 @@ header {
     height: 40px;
     line-height: 40px;
     border-radius: 50px;
-    background-color: #e8f6ea;
+    background-color: lightgray;
     /* font-weight: 500; */
-    color: #088178;
-    border: 1px solid #cce7d0;
+    color: #fe4c50;
+    border: 1px solid #dadada;
     position: absolute;
     bottom: 20px;
     right: 20px;
 }
+
 /* PRODUCT END */
 
 #banner {
@@ -359,7 +375,7 @@ header {
 }
 
 #banner button:hover {
-    background-color: #088178;
+    background-color: #ef3636;
     color: #fff;
 }
 
@@ -408,8 +424,8 @@ header {
 }
 
 #sm-banner .banner-box:hover button {
-    background: #088178;
-    border: 1px solid #088178;  
+    background: #fe4c50;
+    border: 1px solid #fe4c50;
 }
 
 #banner3 {
@@ -454,11 +470,11 @@ header {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    align-items: center; 
+    align-items: center;
     background-image: url("img/product/banner/b14.png");
     background-repeat: no-repeat;
     background-position: 20% 30%;
-    background-color: #041e42;
+    background-color: #d85759;
 }
 
 #newsletter h4 {
@@ -467,13 +483,14 @@ header {
     color: #fff;
 }
 
-#newsletter p{
+#newsletter p {
     font-size: 14px;
     font-weight: 600;
-    color: #818ea0;
+    color: #f3c955;
 }
+
 #newsletter p span {
-    color: #ffbd27;
+    color: #f3c955;
 }
 
 #newsletter .form {
@@ -494,13 +511,15 @@ header {
 }
 
 #newsletter .form button {
-    background-color: #088178;
+    background-color: #fe4c50;
     color: #fff;
     white-space: nowrap;
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    position: relative;
+    transition: 0.2s ease;
 }
-    
 
-
-
+#newsletter .form button:hover {
+    background-color: #ac2628;
+}
