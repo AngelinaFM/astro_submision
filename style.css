@@ -111,6 +111,10 @@ header {
     transition: 0.3s ease;
 }
 
+#navbar a[id="close"] {
+    display: none;
+}
+
 #navbar li a:hover,
 #navbar li a.active {
     color: #fe4c50;
@@ -129,6 +133,11 @@ header {
 
 #navbar li .fa-solid {
     font-size: 1.5rem;
+}
+
+#mobile {
+    display: none;
+    align-items: center;
 }
 
 /* HEADER END */
@@ -207,8 +216,6 @@ header {
     opacity: 1;
     right: 0;
 }
-
-
 /* BUTTON END */
 
 /* PIC LANDING PAGE */
@@ -343,8 +350,21 @@ header {
     bottom: 20px;
     right: 20px;
 }
-
 /* PRODUCT END */
+
+/* BEST SELLERS STAR */
+.best-container {
+}
+
+.best-container .image-list {
+    display: flex;
+    overflow-x: auto;
+}
+
+.best-container .image-list .pro {
+}
+/* BEST SELLERS END */
+
 
 #banner {
     display: flex;
@@ -522,4 +542,174 @@ header {
 
 #newsletter .form button:hover {
     background-color: #ac2628;
+}
+
+footer {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    padding: 60px 0 20px;
+}
+
+footer h4 {
+    font-size: 15px;
+    padding-bottom: 20px;
+    color: #000;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #8a8a8a;
+}
+
+footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .about {
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+}
+
+footer .about a{
+    text-decoration: none;
+    color: #8a8a8a;
+    transition: 0.3s ease-in-out;
+}
+
+footer .about a:hover {
+    color: #fe4c50;
+}
+
+footer .col {
+    display: flex;
+    flex-flow: column nowrap;
+
+    .icon {
+        line-height: 18px;
+
+        ul {
+            list-style-type: none;
+        }
+        a {
+            text-decoration: none;
+            color: #8a8a8a;
+            transition: 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #fe4c50;
+        }
+    }
+}
+
+footer .logo {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    img {
+        width: 100px;
+    }
+    
+    img[src="img/footer/hmcLight.png"] {
+        width: 65px;
+    }
+}
+
+footer .payment {
+    display: flex;
+    /* align-items: center; */
+    gap: 3px;
+}
+
+footer .payment > * {
+    border-radius: 4px;
+    width: 40px;
+    border: 1px solid #606063;
+    transition: 0.2s ease;
+}
+
+footer .payment img:hover {
+    transform: scale(1.1);
+}
+
+footer .copyright {
+    text-align: center;
+
+    hr {
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+}
+
+@media screen and (max-width: 799px) {
+    html {
+        font-size: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s ease-in-out;
+    }
+
+    #navbar li {
+        margin-bottom: 25px; 
+    }
+
+    #navbar.active {
+        right: 0;
+    }
+
+    #navbar a[id="close"] {
+        display: flex;
+        text-decoration: none;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+
+        i {
+            color: #1a1a1a;
+            /* color:red; */
+            font-size: 24px;
+            padding-left: 20px;
+        }
+    }
+
+    #close {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #hero {
+        padding: 0 80px;
+        height: 70vh;
+        background-position: top 30% left 30%;
+    }
 }
