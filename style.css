@@ -81,8 +81,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 100px;
-    background: #fff;
+    padding: 50px 80px;
+    background: #F6F1E9;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     height: 12vh;
     z-index: 999;
@@ -144,18 +144,14 @@ header {
 
 /* HOME PAGE */
 #hero {
-    background-image: url("img/product/banner/slider_1.jpg");
-    background-color: rgb(227, 230, 243);
-    padding: 0 100px;
+    background-image: url("img/Background.png");
+    padding: 0 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     /* height: 88vh; */
     height: 100vh;
     line-height: 50px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position-x: center;
 }
 
 #hero .description {
@@ -180,7 +176,7 @@ header {
     border-radius: 4px;
     outline: none;
     text-align: center;
-    color: #fff;
+    color: #FDFFC2;
     font-size: 17px;
     font-weight: 600;
     padding: 18px 20px;
@@ -195,6 +191,8 @@ header {
     position: relative;
     transition: 0.5s;
     text-align: center;
+    color: #FDFFC2;
+
 }
 
 #hero .ctn-button button span:after {
@@ -216,25 +214,19 @@ header {
     opacity: 1;
     right: 0;
 }
+
 /* BUTTON END */
 
 /* PIC LANDING PAGE */
-#hero .pic {
-    /* border: 1px solid black; */
-    height: 100%;
-    margin-right: 1.82rem;
+#hero img {
+    width: 40%;
 }
 
-#hero .pic img {
-    height: 100%;
-    width: 100%;
-    width: 400px;
-}
+/* PIC LANDING PAGE END*/
 
 /* SLIDER */
 #slider {
     display: flex;
-    /* border: 1px solid black; */
     align-items: center;
     flex-direction: column;
 }
@@ -272,7 +264,6 @@ header {
     -webkit-box-shadow: 9px 9px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 9px 9px 5px 0px rgba(0, 0, 0, 0.75); */
 }
-
 /* SLIDER END*/
 
 /* PRODUCT */
@@ -350,21 +341,58 @@ header {
     bottom: 20px;
     right: 20px;
 }
+
 /* PRODUCT END */
 
 /* BEST SELLERS STAR */
 .best-container {
+    max-width: 1200px;
+    width: 92%;
+    margin: auto;
+
+}
+
+.best-container .slider-wrapper {
+    position: relative;
+}
+
+.slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    /* color: #fff; */
+    border: 1px solid #222;
+    outline: none;
+    background: #F6F1E9;
+    font-size: 2.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.slider-wrapper .slide-button:hover {
+    background: #444;
+}
+
+.slider-wrapper .slide-button#prev-slide {
+    left: -20px;
+    display: none;
+    z-index: 9999;
+}
+
+.slider-wrapper .slide-button#next-slide {
+    right: -20px;
 }
 
 .best-container .image-list {
     display: flex;
+    scrollbar-width: none;
     overflow-x: auto;
+    gap: 18px;
 }
 
-.best-container .image-list .pro {
-}
 /* BEST SELLERS END */
-
 
 #banner {
     display: flex;
@@ -413,7 +441,7 @@ header {
     align-items: flex-start;
     justify-content: center;
     background-image: url("img/product/banner/b17.jpg");
-    min-width: 580px;
+    min-width: 47.5%;
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -574,7 +602,7 @@ footer .about {
     line-height: 18px;
 }
 
-footer .about a{
+footer .about a {
     text-decoration: none;
     color: #8a8a8a;
     transition: 0.3s ease-in-out;
@@ -594,6 +622,7 @@ footer .col {
         ul {
             list-style-type: none;
         }
+
         a {
             text-decoration: none;
             color: #8a8a8a;
@@ -615,7 +644,7 @@ footer .logo {
     img {
         width: 100px;
     }
-    
+
     img[src="img/footer/hmcLight.png"] {
         width: 65px;
     }
@@ -627,7 +656,7 @@ footer .payment {
     gap: 3px;
 }
 
-footer .payment > * {
+footer .payment>* {
     border-radius: 4px;
     width: 40px;
     border: 1px solid #606063;
@@ -651,7 +680,7 @@ footer .copyright {
     html {
         font-size: 50%;
         display: flex;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
     }
 
     #navbar {
@@ -671,7 +700,7 @@ footer .copyright {
     }
 
     #navbar li {
-        margin-bottom: 25px; 
+        margin-bottom: 25px;
     }
 
     #navbar.active {
@@ -707,9 +736,5 @@ footer .copyright {
         display: none;
     }
 
-    #hero {
-        padding: 0 80px;
-        height: 70vh;
-        background-position: top 30% left 30%;
-    }
+
 }
