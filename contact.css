@@ -11,8 +11,9 @@ main {
     font-family: "Montserrat", sans-serif;
     font-size: 10px;
     height: 100vh;
-    margin: -20px 0 50px;
+    margin: -20px 0 0;
     padding: 10px;
+
 }
 .container {
     background-color: #ffffff;
@@ -24,14 +25,32 @@ main {
     max-width: 100%;
     min-height: 522px;
     min-width: 370px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
 }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 .card-container {
     display: flex;
 }
+
 .left {
     flex: 1;
     height: 480px;
     background-color: #e69697;
+    align-items: center;
 }
 .right {
     display: flex;
@@ -54,7 +73,10 @@ main {
     width: 80%;
     text-align: center;
     line-height: 22px;
+    margin: auto;
+
 }
+
 .left p {
     font-size: 0.9rem;
 }
