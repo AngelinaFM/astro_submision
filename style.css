@@ -346,7 +346,7 @@ header {
 .best-container .image-list {
     display: flex;
     scrollbar-width: none;
-    overflow-x: auto;
+    overflow-x: auto; 
     gap: 18px;
 }
 
@@ -473,11 +473,10 @@ header {
 }
 
 /* PROFILE */ 
-
-.garis {
-    height: 10px;
-    width: 60%;
-    background-color: #ef3636;
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
 }
 
 .profile{
@@ -517,6 +516,7 @@ header {
 	color: #555;
 	margin: 12px 0 0;
 }
+
 /* END PROFILE */
 
 #newsletter {
